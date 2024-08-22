@@ -1,36 +1,17 @@
 package com.ntt.tgp;
 
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Variables {
     public static void main(String[] args) {
-        // Tipos de datos primitivos en Java
-        int numeroEntero = 10;          // Tipo de dato int: Almacena números enteros (sin decimales)
-        double numeroDecimal = 5.99;    // Tipo de dato double: Almacena números con decimales
-        char caracter = 'A';            // Tipo de dato char: Almacena un solo carácter
-        boolean esVerdadero = true;     // Tipo de dato boolean: Almacena valores de verdadero (true) o falso (false)
+        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
+        // to see how IntelliJ IDEA suggests fixing it.
+        System.out.printf("Hello and welcome!");
 
-        // Tipo de dato String en Java (No es primitivo, pero se usa mucho)
-        String texto = "Hola, NTT Data!";  // Tipo de dato String: Almacena cadenas de texto
-
-        // Mostrando los valores de las variables
-        System.out.println("El valor de numeroEntero es: " + numeroEntero);
-        System.out.println("El valor de numeroDecimal es: " + numeroDecimal);
-        System.out.println("El valor de caracter es: " + caracter);
-        System.out.println("El valor de esVerdadero es: " + esVerdadero);
-        System.out.println("El valor de texto es: " + texto);
-
-        // Usando una variable en un bucle for
-        for (int i = 1; i <= numeroEntero; i++) {
+        for (int i = 1; i <= 5; i++) {
+            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
+            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
-
-        // Pasos para creación de una variable
-        // Paso 1: Declarar la variable con el tipo de dato
-        int nuevaVariable;
-
-        // Paso 2: Inicializar la variable
-        nuevaVariable = 20;
-
-        // Paso 3: Ejecución
-        System.out.println("El valor de nuevaVariable es: " + nuevaVariable);
     }
 }
