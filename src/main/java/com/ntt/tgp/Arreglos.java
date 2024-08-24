@@ -47,8 +47,30 @@ public class Arreglos {
         Arrays.sort(desordenados); // Ordenar el arreglo
         System.out.println("Arreglo ordenado: " + Arrays.toString(desordenados));
 
+        // 7. Uso de Arrays.binarySearch()
+        int posicion = Arrays.binarySearch(desordenados, 9); // Buscar el número 9 en el arreglo ordenado
+        System.out.println("Posición del número 9 en el arreglo ordenado: " + posicion);
 
+        // 8. Uso de Arrays.copyOf()
+        int[] copiaNumeros = Arrays.copyOf(numeros, 7); // Copiar los primeros 5 elementos del arreglo 'numeros' en un nuevo arreglo de tamaño 7
+        System.out.println("Copia del arreglo con nuevos elementos inicializados a 0: " + Arrays.toString(copiaNumeros));
 
+        // 9. Uso de Arrays.equals()
+        int[] numeros2 = {1, 2, 10, 4, 5}; // Arreglo para comparación
+        boolean sonIguales = Arrays.equals(numeros, numeros2); // Comparar si 'numeros' y 'numeros2' son iguales
+        System.out.println("¿Son iguales los arreglos 'numeros' y 'numeros2'?: " + sonIguales);
+
+        // 10. Uso de Arrays.fill()
+        int[] vacios = new int[5];
+        Arrays.fill(vacios, 7); // Llenar el arreglo 'vacios' con el valor 7
+        System.out.println("Arreglo llenado con 7: " + Arrays.toString(vacios));
+
+        // 11. Uso de Arrays.toString()
+        System.out.println("Contenido del arreglo 'numeros': " + Arrays.toString(numeros)); // Convertir el arreglo a una cadena de texto
+
+        // 12. Uso de Arrays.stream()
+        System.out.println("Usando stream para imprimir cada número del arreglo 'numeros':");
+        Arrays.stream(numeros).forEach(System.out::println); // Convertir el arreglo en un Stream y recorrerlo para imprimir cada elemento
     }
 }
 
