@@ -2,6 +2,7 @@ package main;
 
 import java.util.Scanner;
 import mascota.Perro;
+import persona.Persona;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,6 +10,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingrese el nombre de la mascota: ");
         String nombrePerro = scanner.nextLine();
+
+        System.out.print("Ingrese el nombre del papá ");
+        String nombrePapa = scanner.nextLine();
 
         Perro perro1 = new Perro(nombrePerro);
         perro1.setVacunado(true);
@@ -22,12 +26,17 @@ public class Main {
 
         //uso de metodos
         System.out.println("Acciones de " + perro1.getNombre() + ":");
-
-
         perro1.ladrar();
 
+        Persona persona1 = new Persona(nombrePapa);
+        persona1.setEdad(30);
+        persona1.setSexo(true);
 
-        scanner.close();
+
+        System.out.println(persona1.getNombre() + " es papá de " + perro1.getNombre());
+        System.out.println(persona1.getNombre() + " tiene " + persona1.getEdad() + " años y es " + (persona1.getSexo() ? "hombre." : "mujer."));
+
+        System.out.println(persona1.comprobarSexo());
 
 
     }
