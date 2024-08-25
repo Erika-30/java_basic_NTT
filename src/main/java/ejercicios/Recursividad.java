@@ -19,6 +19,11 @@ public class Recursividad {
         double montoFinal = calcularInteresCompuesto(capitalInicial, tasaInteres, años); // Se llama al método recursivo para calcular el monto final
         System.out.println("El monto final después de " + años + " años es: " + montoFinal); // Se imprime el resultado final
 
+        // Ejemplo 4: Cálculo de la potencia de un número
+        int base = 2; // Base de la potencia
+        int exponente = 3; // Exponente de la potencia
+        int resultadoPotencia = potencia(base, exponente); // Se llama al método potencia con base 2 y exponente 3
+        System.out.println(base + " elevado a la " + exponente + " es: " + resultadoPotencia); // Se imprime el resultado final de la potencia
     }
 
     // Método recursivo para calcular el factorial de un número
@@ -35,31 +40,6 @@ public class Recursividad {
             return resultado; // Se retorna el resultado al siguiente nivel de la recursión
         }
     }
-    //Llamada a factorial(5):
-    //    n != 1, entonces:
-    //        resultado = 5 * factorial(4)
-    //
-    //Llamada a factorial(4):
-    //    n != 1, entonces:
-    //        resultado = 4 * factorial(3)
-    //
-    //Llamada a factorial(3):
-    //    n != 1, entonces:
-    //        resultado = 3 * factorial(2)
-    //
-    //Llamada a factorial(2):
-    //    n != 1, entonces:
-    //        resultado = 2 * factorial(1)
-    //
-    //Llamada a factorial(1):
-    //    n == 1, entonces:
-    //        RETORNAR 1 (este es el caso base)
-    //
-    //Resolviendo la recursión:
-    //    factorial(2) retorna 2 * 1 = 2
-    //    factorial(3) retorna 3 * 2 = 6
-    //    factorial(4) retorna 4 * 6 = 24
-    //    factorial(5) retorna 5 * 24 = 120
 
     // Método recursivo para calcular la suma de todos los números desde 1 hasta n
     public static int sumaRecursiva(int n) {
@@ -87,6 +67,20 @@ public class Recursividad {
             double nuevoCapital = capital * (1 + tasa);
             System.out.println("Año " + años + ": capital acumulado = " + nuevoCapital);
             return calcularInteresCompuesto(nuevoCapital, tasa, años - 1);
+        }
+    }
+
+    // Método recursivo para calcular la potencia de un número
+    public static int potencia(int base, int exponente) {
+        // Caso base: cualquier número elevado a la potencia 0 es 1
+        if (exponente == 0) {
+            System.out.println("Caso base alcanzado: " + base + "^" + exponente + " = 1");
+            return 1;
+        } else {
+            // Llamada recursiva: base^exponente = base * base^(exponente-1)
+            int resultado = base * potencia(base, exponente - 1);
+            System.out.println("Retornando " + base + "^" + exponente + " = " + resultado);
+            return resultado;
         }
     }
 }
