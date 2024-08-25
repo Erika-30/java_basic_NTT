@@ -11,7 +11,12 @@ public class Perro {
     private int numeroPatas; // Con private, los getters y setters son la única forma de acceder y manipular estos atributos.
 
 
-    // Constructor
+    // Constructor con solo el nombre
+    public Perro(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // Constructor con todos los atributos
     public Perro(String nombre, boolean vacunado, int edad, String raza, String color, int numeroPatas) {
         this.nombre = nombre;
         this.vacunado = vacunado;
@@ -20,6 +25,8 @@ public class Perro {
         this.color = color;
         this.numeroPatas = numeroPatas;
     }
+
+    //ENCAPSULAMIENTO
 
     // Getters y Setters
     public String getNombre() {
@@ -70,5 +77,38 @@ public class Perro {
         this.numeroPatas = numeroPatas;
     }
 
+    // Métodos
+    public void ladrar() {
+        System.out.println("¡Guau! ¡Guau!");
+    }
+
+    public void dormir() {
+        System.out.println("Zzz...");
+    }
+
+    public void comer() {
+        System.out.println("¡Ñam! ¡Ñam!");
+    }
+
+    public void correr() {
+        System.out.println("¡Corre, corre!");
+    }
+
+    public void vacunar() {
+        this.vacunado = true;
+        System.out.println("¡Vacunado!");
+    }
+
+    public void desparasitar() {
+        System.out.println("¡Desparasitado!");
+    }
+
+    public void banar() {
+        System.out.println("¡Baño listo!");
+    }
+
+    public void cortarPelo() {
+        System.out.println("¡Corte de pelo listo!");
+    }
 
 }
