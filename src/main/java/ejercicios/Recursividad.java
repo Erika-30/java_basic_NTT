@@ -35,6 +35,31 @@ public class Recursividad {
             return resultado; // Se retorna el resultado al siguiente nivel de la recursión
         }
     }
+    //Llamada a factorial(5):
+    //    n != 1, entonces:
+    //        resultado = 5 * factorial(4)
+    //
+    //Llamada a factorial(4):
+    //    n != 1, entonces:
+    //        resultado = 4 * factorial(3)
+    //
+    //Llamada a factorial(3):
+    //    n != 1, entonces:
+    //        resultado = 3 * factorial(2)
+    //
+    //Llamada a factorial(2):
+    //    n != 1, entonces:
+    //        resultado = 2 * factorial(1)
+    //
+    //Llamada a factorial(1):
+    //    n == 1, entonces:
+    //        RETORNAR 1 (este es el caso base)
+    //
+    //Resolviendo la recursión:
+    //    factorial(2) retorna 2 * 1 = 2
+    //    factorial(3) retorna 3 * 2 = 6
+    //    factorial(4) retorna 4 * 6 = 24
+    //    factorial(5) retorna 5 * 24 = 120
 
     // Método recursivo para calcular la suma de todos los números desde 1 hasta n
     public static int sumaRecursiva(int n) {
