@@ -79,36 +79,11 @@ public class Perro {
 
     // Métodos
     public void ladrar() {
-        System.out.println("¡Guau! ¡Guau!");
+    System.out.println(nombre + " dice: ¡Guau, guau!");
     }
 
-    public void dormir() {
-        System.out.println("Zzz...");
-    }
 
-    public void comer() {
-        System.out.println("¡Ñam! ¡Ñam!");
-    }
 
-    public void correr() {
-        System.out.println("¡Corre, corre!");
-    }
 
-    public void vacunar() {
-        this.vacunado = true;
-        System.out.println("¡Vacunado!");
-    }
-
-    public void desparasitar() {
-        System.out.println("¡Desparasitado!");
-    }
-
-    public void banar() {
-        System.out.println("¡Baño listo!");
-    }
-
-    public void cortarPelo() {
-        System.out.println("¡Corte de pelo listo!");
-    }
 
 }
