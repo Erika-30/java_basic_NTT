@@ -83,4 +83,26 @@ public class Recursividad {
             return resultado;
         }
     }
+
+//    Llamada a potencia(2, 3): dos al cubo
+//    exponente != 0, entonces:
+//    resultado = 2 * potencia(2, 2)
+//
+//    Llamada a potencia(2, 2):
+//    exponente != 0, entonces:
+//    resultado = 2 * potencia(2, 1)
+//
+//    Llamada a potencia(2, 1):
+//    exponente != 0, entonces:
+//    resultado = 2 * potencia(2, 0)
+//
+//    Llamada a potencia(2, 0):
+//    exponente == 0, entonces:
+//    RETORNAR 1 (este es el caso base)
+//
+//    Resolviendo la recursión:
+//    potencia(2, 1) retorna 2 * 1 = 2
+//    potencia(2, 2) retorna 2 * 2 = 4
+//    potencia(2, 3) retorna 2 * 4 = 8
+
 }
