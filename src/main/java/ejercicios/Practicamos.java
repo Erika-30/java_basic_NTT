@@ -18,6 +18,23 @@ public class Practicamos {
 
         // Imprimir el promedio
         System.out.println(promedio);
+
+        int lista[] = {6, 9, -8, 23, 3, 100, 3}; // Declaración e inicialización de un array de enteros con valores específicos
+
+        int nNum1 = lista[0]; // Inicializa nNum1 con el primer valor del array (en este caso, 6)
+        int nNum2 = lista[0]; // Inicializa nNum2 con el primer valor del array (en este caso, 6)
+
+        for (int i = 1; i < lista.length; i++) { // Bucle for que recorre el array desde el segundo elemento hasta el final
+            if (lista[i] < nNum1) { // Comprueba si el valor actual del array es menor que nNum1
+                nNum1 = lista[i]; // Si es menor, actualiza nNum1 con este nuevo valor
+            }
+            if (lista[i] > nNum2) { // Comprueba si el valor actual del array es mayor que nNum2
+                nNum2 = lista[i]; // Si es mayor, actualiza nNum2 con este nuevo valor
+            }
+        }
+
+        System.out.println("nNum1: " + nNum1 + ", nNum2: " + nNum2); // Imprime los valores de nNum1 (mínimo) y nNum2 (máximo) en la consola
+
     }
 //    Inicio
 //    // Declarar el array con las notas
@@ -37,4 +54,7 @@ public class Practicamos {
 //    // Imprimir el promedio
 //    Imprimir promedio
 //Fin
+
+
+
 }
